@@ -45,7 +45,7 @@ Your Supabase project is already configured locally. Before deploying, verify th
 
 ### Option A: Verify via Supabase Dashboard
 1. Go to [https://app.supabase.com](https://app.supabase.com)
-2. Open your project (ID: `jdzfpqmfgmuyrdsplzeq`)
+2. Open your Supabase project
 3. Navigate to SQL Editor
 4. Run this query to verify tables exist:
    ```sql
@@ -78,12 +78,18 @@ If tables don't exist:
 In Vercel's project settings:
 
 1. Go to **Settings** → **Environment Variables**
-2. Add these variables:
+2. Get your keys from Supabase:
+   - Go to [https://app.supabase.com](https://app.supabase.com)
+   - Open your project
+   - Click **Settings** → **API**
+   - Copy your **Project URL** and **Anon Key**
+
+3. Add these variables to Vercel:
    ```
-   NEXT_PUBLIC_SUPABASE_URL = https://jdzfpqmfgmuyrdsplzeq.supabase.co
-   NEXT_PUBLIC_SUPABASE_ANON_KEY = sb_publishable_Izl0SPgdcdmKPcYlBzUowA_3b4kQtvc
+   NEXT_PUBLIC_SUPABASE_URL = [paste your Project URL here]
+   NEXT_PUBLIC_SUPABASE_ANON_KEY = [paste your Anon Key here]
    ```
-3. Set them to appear in:
+4. Set them to appear in:
    - Production
    - Preview
    - Development
